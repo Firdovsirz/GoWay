@@ -1,0 +1,152 @@
+.login-main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EAEAEA;
+    position: relative;
+    overflow: hidden;
+
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @media (max-width: 600px) {
+            width: 100%;
+        }
+
+        .login-txt {
+            margin-bottom: 50px;
+
+            h1 {
+                font-size: 25px;
+                font-weight: 500;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+            }
+        }
+
+        .login-form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media (max-width: 600px) {
+                width: 100%;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                @media (max-width: 600px) {
+                    width: 100%;
+                }
+                .username-label,
+                .email-label,
+                .pass-label {
+                    position: relative;
+                    @media (max-width: 600px) {
+                        width: 90%;
+                    }
+
+                    input {
+                        height: 50px;
+                        width: 500px;
+                        margin-block: 10px;
+                        outline: none;
+                        border: none;
+                        border-radius: 10px;
+                        padding: 10px;
+                        font-size: 18px;
+                        @media (max-width: 600px) {
+                            width: 100%;
+                        }
+
+                        &:focus,
+                        &:valid {
+                            color: #000;
+                        }
+
+                        &:focus+.username-placeholder,
+                        &:focus+.email-placeholder,
+                        &:focus+.pass-placeholder,
+                        &:valid+.username-placeholder,
+                        &:valid+.email-placeholder,
+                        &:valid+.pass-placeholder {
+                            transform: translate(10px, -26px);
+                            background: #A664E3;
+                            color: #fff;
+                            padding: 2px 5px;
+                            border-radius: 2px;
+
+                        }
+                    }
+
+                    .username-placeholder,
+                    .email-placeholder,
+                    .pass-placeholder {
+                        position: absolute;
+                        top: 26px;
+                        left: 10px;
+                        transition: all 400ms;
+                    }
+                }
+                .login-btn{
+                    width: 200px;
+                    height: 50px;
+                    margin-top: 40px;
+                    background: #A664E3;
+                    color: #fff;
+                    font-size: 18px;
+                    border: 1px solid #A664E3;
+                    border-radius: 10px;
+                    transition: all 400ms;
+                    cursor: pointer;
+                    &:hover{
+                        background: transparent;
+                        color: #A664E3;
+                    }
+                }
+            }
+
+        }
+    }
+    .login-first-circle{
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: #401A63;
+        position: absolute;
+        top: -100px;
+        left: -100px;
+        @media (max-width: 600px){
+            &{
+                width: 250px;
+                height: 250px;
+            }
+        }
+    }
+    .login-second-circle{
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: #401A63;
+        position: absolute;
+        bottom: -100px;
+        right: -100px;
+        overflow: hidden;
+        @media (max-width: 600px){
+            &{
+                width: 250px;
+                height: 250px;
+            }
+        }
+    }
+}
