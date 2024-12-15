@@ -8,9 +8,7 @@ function App() {
 
   return (
     <>
-      {/* <IntroPage /> */}
-      {/* <Login /> */}
-      <BottomNavigation />
+      <Login />
     </>
   )
 }
